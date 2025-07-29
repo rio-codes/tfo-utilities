@@ -1,3 +1,12 @@
+/**
+ * Calculates probability of possible genotypes (e.g. AaBBcc) for monohybrid, dihybrid, and trihybrid crosses using Punnett squares
+ *
+ * @param {string} genotype_parent1 The genotype of the first parent
+ * @param {string} genotype_parent2 The genotype of the second parent
+ * @param {string} genotype_goal The genotype of the goal offspring
+ * @return The probability of the goal genotype being produced
+ * @customfunction
+ */
 function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
   const genotype = new Map();
   const alleles_monohybrid = [];
@@ -50,6 +59,8 @@ function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
       alleles_dihybrid_p2[1] = genotype_parent2[0].concat(genotype_parent2[3]);
       alleles_dihybrid_p2[2] = genotype_parent2[1].concat(genotype_parent2[2]);
       alleles_dihybrid_p2[3] = genotype_parent2[1].concat(genotype_parent2[3]);
+
+      console.log(alleles_dihybrid_p1, alleles_dihybrid_p2)
 
       // generate arrays of possible dihybrid combinations
       for (let l = 0; l < 4; l++) {
@@ -136,7 +147,6 @@ function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
       const allele_count = unique_allele.concat("_count");
       genotype[allele_count] = 0;
       for (let z = 0; z < alleles_hybrid_any.length; z++) {
-        console.log("checking allele", alleles_hybrid_any[z], "vs", unique_allele);
         if (alleles_hybrid_any[z] == unique_allele) {
           genotype[allele_count]++;
         }
@@ -150,6 +160,7 @@ function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
 
     // return probability of goal
     goal_probability = genotype_goal.concat("_probability");
+
     if (genotype[goal_probability]) {
       return genotype[goal_probability];
     }

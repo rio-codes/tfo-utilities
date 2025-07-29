@@ -10,6 +10,11 @@ From within your Google Sheet, click the "Extensions" menu, then "Apps Script". 
 ### To Use in a Google Sheet
 Inside a cell that you wish to contain the probability of a research goal, type `=PUNNETT(`, then select the cells with the genotype of each parent for your desired trait (for example "AabbCC" and "aaBbCc") followed by a cell containing your goal genotype. Separate the selected cells with commas and finish with a `)`. It should look something like `=PUNNETT(K3,K5,K2)` in the formula bar at the top. It will work with monohybrid, dihybrid, and trihybrid crosses and returns a probability as a decimal that the last value, your goal genotype, will be inherited. To format the cell as a percentage, select it and then click the "Format" menu, and select "Number" -> "Percent".
 
+UPDATE: Please obtain the newest version of the code, it makes use of JsDoc and provides autocomplete when you start typing the function name with documentation like so:
+
+<img width="441" height="168" alt="image" src="https://github.com/user-attachments/assets/bd8b7fd4-d3ea-41cf-aa70-2da5b22289f9" />   <img width="443" height="168" alt="image" src="https://github.com/user-attachments/assets/162a1a9f-39e0-4163-9d11-7ad989d115dc" />
+
+
 ### Example Usage
 In my spreadsheet, I have a separate sheet for each breeding goal, with two important tables. One is the table listing each creature with all of their traits and my research goal at the top. Here is a screenshot from my Nokta Voko log:
 <img width="2209" height="329" alt="image" src="https://github.com/user-attachments/assets/498ed08d-b3ea-4061-ba41-fe9e8238d3f0" />

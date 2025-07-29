@@ -52,8 +52,8 @@ function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
       alleles_dihybrid_p2[3] = genotype_parent2[1].concat(genotype_parent2[3]);
 
       // generate arrays of possible dihybrid combinations
-      for (let l = 0; l < dihybrid_alleles_parent1.length; l++) {
-        for (let m = 0; m < dihybrid_alleles_parent2.length; m++) {
+      for (let l = 0; l < 4; l++) {
+        for (let m = 0; m < 4; m++) {
           alleles_dihybrid_combined[l] = alleles_dihybrid_p1[l].concat(alleles_dihybrid_p2[m]);
           sorted_dihybrid_alleles[l] = Array.from(alleles_dihybrid_combined[l]);
           sorted_dihybrid_alleles[l].sort((a,b) => {

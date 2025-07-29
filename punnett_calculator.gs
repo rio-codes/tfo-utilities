@@ -14,7 +14,7 @@ function PUNNETT(genotype_parent1, genotype_parent2, genotype_goal) {
   const alleles_trihybrid = [];
 
   // make sure inputs are both monohybrid, dihybrid, or trihybrid
-  if ((genotype_parent1.length == genotype_parent2.length) && [2, 4, 6].includes(genotype_parent1.length && genotype_parent2.length))  {
+  if ((genotype_parent1.length == genotype_parent2.length) && [2, 4, 6].includes(genotype_parent1.length))  {
     // calculate monohybrid crosses
     if (genotype_parent1.length == 2) {
       // combine alleles from each parent to create all possible monohybrid combinations
